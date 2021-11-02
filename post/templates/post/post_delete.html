@@ -2,20 +2,43 @@
 
 {% block content %}
 <style>
-.container h1 {
-    font-size: 30px;
+.mustlogin {
+    font-size: 17px;
     font-weight: bolder;
     text-align: center;
     color: #57B59A;
 }
+/*색상 변경 코드 추가*/
+.btn-outline-success:active,
+.btn-outline-success:visited,
+.btn-outline-success:active:focus,
+.btn-outline-success:active:hover {
+    border-color: #57B59A;
+    background-color: #57B59A;
+    }
+
+    {
+        margin:0 auto;
+        padding:0;
+        border:0;
+        font: 맑은고딕;
+        text-decoration:none;
+        letter-spacing:0px;
+    }
+    html {height:100%;}
+
+    .buttons{
+        margin: 0 auto;
+        text-align:center;
+    }
 </style>
 
 <body>
     <br/>
-    <div class="container">
-        <h1>글이 삭제되었습니다.</h1>
+    <div class="mustlogin">
+        <p>글이 삭제되었습니다.</p>
         <a href="/">
-            <a class="btn btn-outline-primary" href="{% url 'post:post_list' %}" style ="float:left; margin-top:25px;">목록 보기</a>
+            <a class="btn btn-outline-success" href="{% url 'post:post_list' %}" style ="margin-top:25px;">글 목록</a>
         </a>
     </div>
 </body>
