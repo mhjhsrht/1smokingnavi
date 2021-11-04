@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7f9334f5-8302-49f8-9507-19bd6853b0e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/templates/post/comment_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/post/templates/post/comment_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/templates/post/post_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/post/templates/post/post_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
