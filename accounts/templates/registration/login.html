@@ -5,8 +5,9 @@
 <style>
     .loginbox {
         position:relative;
-        top:300px;
+        top:350px;
         width: 70%;
+        font-size:23px;
         text-align: center;
         border: 1px solid #EAEAEA;
         border-radius: 40px;
@@ -65,8 +66,8 @@
         </div>
         <br/><br/>
 
-        <button id="button1" type="submit" class="btn btn-outline-success">로그인</button>
-        <a href="{% url 'accounts:register' %}" class="btn btn-outline-success">회원가입</a>
+        <button style="font-size:23px;" id="button1" type="submit" class="btn btn-outline-success">로그인</button>
+        <a style="font-size:23px;" href="{% url 'accounts:register' %}" class="btn btn-outline-success">회원가입</a>
     </form>
 </div>
 {% endblock %}

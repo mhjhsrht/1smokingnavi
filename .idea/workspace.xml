@@ -3,18 +3,39 @@
   <component name="ChangeListManager">
     <list default="true" id="7f9334f5-8302-49f8-9507-19bd6853b0e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/accounts_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/accounts_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/form_errors.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/form_errors.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/templates/post/post_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/post/templates/post/post_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/logout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/register_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/register_done.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/post/templates/post/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/post/templates/post/post_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/templates/post/post_must_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/post/templates/post/post_must_login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/dobong_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/dobong_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/dongdaemun_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/dongdaemun_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/dongjak_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/dongjak_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/eunpyeong_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/eunpyeong_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/gangbuk_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/gangbuk_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/gangdong_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/gangdong_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/gangnam_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/gangnam_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/gangseo_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/gangseo_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/geumcheon_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/geumcheon_map.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/graph.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/graph.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/graph_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/graph_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/location.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/location.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/guro_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/guro_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/gwanak_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/gwanak_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/gwangjin_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/gwangjin_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/jongro_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/jongro_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/jung_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/jung_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/jungrang_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/jungrang_map.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/location_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/location_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/mapo_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/mapo_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/nowon_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/nowon_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/seocho_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/seocho_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/seodaemun_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/seodaemun_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/seongbuk_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/seongbuk_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/seongdong_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/seongdong_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/songpa_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/songpa_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/yangcheon_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/yangcheon_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/yeongdeungpo_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/yeongdeungpo_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/yongsan_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/yongsan_map.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -7,7 +7,7 @@
 .container {
     margin-bottom: 50px;
     position:relative;
-    top:100px;
+    top:200px;
 }
 
 a:hover {
@@ -36,9 +36,6 @@ a:hover {
     font-weight: bold;
 }
 
-<!--.author {-->
-<!--    float: right;-->
-<!--}-->
 
 .text-ellipsis {
       width: 450px;
@@ -96,14 +93,14 @@ table {
 <body>
 
 
-<div class="container">
+<div class="container" style="width:100%">
 
   <div class="buttonbox">
         <!--글쓰기 기능을 위한 버튼-->
         <div class="writebutton">
             <a href="{% url 'post:post_new' %}">
             <button class="btn my-2 my-sm-0">
-                <img style="width:22px;height:22px;" src="https://user-images.githubusercontent.com/73421028/133558544-baeabe75-999d-415b-8f02-746b2293d5e6.png">
+                <img style="width:36px;height:36px;margin-top:7px;" src="https://user-images.githubusercontent.com/73421028/133558544-baeabe75-999d-415b-8f02-746b2293d5e6.png">
             </button>
             </a>
         </div>
@@ -111,17 +108,18 @@ table {
         <!-- 검색 기능을 위한 검색 창과 버튼-->
         <div class="searchbutton">
             <form action="" method="GET" class="form-inline my-2 my-lg-0" >
-                <input class="form-control mr-sm-2" style="width:220px;" name="search_key" value="{{ search_key }}" type="text" placeholder="검색어를 입력해주세요" aria-label="Search">
+                <input class="form-control mr-sm-2" style="width:360px; height:50px;" name="search_key" value="{{ search_key }}" type="text" placeholder="검색어를 입력해주세요" aria-label="Search">
                 <button class="btn my-2 my-sm-0" type="submit">
-                    <img style="width:22px;height:22px;" src="https://user-images.githubusercontent.com/73421028/133556991-e1de119a-40b5-4276-b980-9254d9ee5af3.png">
+                    <img style="width:36px;height:36px;" src="https://user-images.githubusercontent.com/73421028/133556991-e1de119a-40b5-4276-b980-9254d9ee5af3.png">
                 </button>
             </form>
         </div>
     </div>
+    <br>
 
 
 
-    <div class="row mt-5">
+    <div class="row mt-5" style="font-size:23px;">
         <div class="col-12">
 
         </div>
@@ -164,8 +162,9 @@ table {
     </div>
 </div>
 
+<br><br><br><br><br><br><br><br><br>
 
-<div class="paging">
+<div class="paging" style="font-size:26px;">
             <ul class="pagination justify-content-center">
         <!-- 이전페이지 -->
         {% if posts.has_previous %}

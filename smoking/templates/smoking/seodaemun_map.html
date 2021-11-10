@@ -4,7 +4,7 @@
 {% block content %}
 
 <style>
-     .dropdown-menu {
+.dropdown-menu {
         max-height: 400px;
         overflow: hidden;
         overflow-y: auto;
@@ -12,9 +12,9 @@
 
     div#map {margin:0px auto}
 
-     .box {
+    .box {
         position : absolute;
-        top : 180px;
+        top : 290px;
         left: 15px;
         width: 97%;
 
@@ -24,107 +24,87 @@
         padding: 2%;
         background: #FDFFFF;
     }
+
+        footer {
+        margin-top:1800px;
+        }
+
     .dropdown>a {
     background-color: lightgray;
-}
+    }
 
 .dropdown>a:hover {
     background-color: #57B59A;
 }
-    #map{position:relative;overflow:hidden;}
+
+.dropdown-item{
+    height: 40px;
+    font-size:16px;
+    padding-top:10px;
+}
+
+#map{position:relative;overflow:hidden;}
 .dropdown, .dropdown *{margin:0;color:#000;}
-.dropdown {position:absolute;top:200px;left:28px; z-index:10;text-align:center;background-color:#FFFFFF;}
+.dropdown {position:absolute;top:430px;left:50px;z-index:10;text-align:center;background-color:#fff;}
 
-.typebox {width: 144px; position:absolute; top:10px; right:10px; z-index:10; text-align:center; background-color:#fff; padding : 7px;
+.typebox {width: 200px; height:200px; position:absolute; top:10px; right:10px; z-index:10; text-align:center; background-color:#fff; padding : 7px;
           border-radius:10px;}
-.smalltype {margin-bottom:3px;}
+.smalltype {margin-bottom:4px; font-size:23px;}
 
-    @media screen and (max-width: 936px) {
-        .container {
-            margin-top: 10px;
-            margin-bottom: 5px;
-        }
-
-        .box2 > .table {
-            scroll-behavior: auto;
-            font-size: x-small;
-            white-space: nowrap;
-        }
-
-        .dropdown {position:absolute; top:325px;left:20px; z-index:10;text-align:center;background-color:#FFFFFF;}
-
-        .box {
-        position : absolute;
-        top : 220px;
-        left: 15px;
-        width: 97%;
-
-        text-align: center;
-        border: 3px solid #57B59A;
-        border-radius: 10px;
-        padding: 2%;
-        background: #FDFFFF;
-    }
-
-    }
 </style>
 
-<div class="container" style="margin-top: 10px">
-
-   <div class = "dropdown">
-        <button style="color:white;" class = "btn btn-secondary dropdown-toggle" data-toggle="dropdown">구 선택</button>
-            <a class="dropdown-item" href="{% url 'smoking:gangnam_map' %}" style="height:25px;font-size:13px;">강남구</a>
+<div class = "dropdown">
+        <button style="color:white; width: 150px; height:80px;font-size:23px;" class = "btn btn-secondary dropdown-toggle" data-toggle="dropdown">구 선택</button>
+            <a class="dropdown-item" href="{% url 'smoking:gangnam_map' %}">강남구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:gangdong_map' %}" style="height:25px;font-size:13px;">강동구</a>
+            <a class="dropdown-item" href="{% url 'smoking:gangdong_map' %}">강동구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:gangbuk_map' %}" style="height:25px;font-size:13px;">강북구</a>
+            <a class="dropdown-item" href="{% url 'smoking:gangbuk_map' %}">강북구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:gangseo_map' %}" style="height:25px;font-size:13px;">강서구</a>
+            <a class="dropdown-item" href="{% url 'smoking:gangseo_map' %}">강서구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:gwanak_map' %}" style="height:25px;font-size:13px">관악구</a>
+            <a class="dropdown-item" href="{% url 'smoking:gwanak_map' %}">관악구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:gwangjin_map' %}" style="height:25px;font-size:13px">광진구</a>
+            <a class="dropdown-item" href="{% url 'smoking:gwangjin_map' %}">광진구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:guro_map' %}" style="height:25px;font-size:13px">구로구</a>
+            <a class="dropdown-item" href="{% url 'smoking:guro_map' %}">구로구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:geumcheon_map' %}" style="height:25px;font-size:13px">금천구</a>
+            <a class="dropdown-item" href="{% url 'smoking:geumcheon_map' %}">금천구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:nowon_map' %}" style="height:25px;font-size:13px">노원구</a>
+            <a class="dropdown-item" href="{% url 'smoking:nowon_map' %}">노원구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:dobong_map' %}" style="height:25px;font-size:13px">도봉구</a>
+            <a class="dropdown-item" href="{% url 'smoking:dobong_map' %}">도봉구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:dongdaemun_map' %}" style="height:25px;font-size:13px">동대문구</a>
+            <a class="dropdown-item" href="{% url 'smoking:dongdaemun_map' %}">동대문구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:dongjak_map' %}" style="height:25px;font-size:13px">동작구</a>
+            <a class="dropdown-item" href="{% url 'smoking:dongjak_map' %}">동작구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:mapo_map' %}" style="height:25px;font-size:13px">마포구</a>
+            <a class="dropdown-item" href="{% url 'smoking:mapo_map' %}">마포구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:seodaemun_map' %}" style="height:25px;font-size:13px">서대문구</a>
+            <a class="dropdown-item" href="{% url 'smoking:seodaemun_map' %}">서대문구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:seocho_map' %}" style="height:25px;font-size:13px">서초구</a>
+            <a class="dropdown-item" href="{% url 'smoking:seocho_map' %}">서초구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:seongdong_map' %}" style="height:25px;font-size:13px">성동구</a>
+            <a class="dropdown-item" href="{% url 'smoking:seongdong_map' %}">성동구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:seongbuk_map' %}" style="height:25px;font-size:13px">성북구</a>
+            <a class="dropdown-item" href="{% url 'smoking:seongbuk_map' %}">성북구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:songpa_map' %}" style="height:25px;font-size:13px">송파구</a>
+            <a class="dropdown-item" href="{% url 'smoking:songpa_map' %}">송파구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:yangcheon_map' %}" style="height:25px;font-size:13px">양천구</a>
+            <a class="dropdown-item" href="{% url 'smoking:yangcheon_map' %}">양천구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:yeongdeungpo_map' %}" style="height:25px;font-size:13px">영등포구</a>
+            <a class="dropdown-item" href="{% url 'smoking:yeongdeungpo_map' %}">영등포구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:yongsan_map' %}" style="height:25px;font-size:13px">용산구</a>
+            <a class="dropdown-item" href="{% url 'smoking:yongsan_map' %}">용산구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:eunpyeong_map' %}" style="height:25px;font-size:13px">은평구</a>
+            <a class="dropdown-item" href="{% url 'smoking:eunpyeong_map' %}">은평구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:jongro_map' %}" style="height:25px;font-size:13px">종로구</a>
+            <a class="dropdown-item" href="{% url 'smoking:jongro_map' %}">종로구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:jung_map' %}" style="height:25px;font-size:13px">중구</a>
+            <a class="dropdown-item" href="{% url 'smoking:jung_map' %}">중구</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
-            <a class="dropdown-item" href="{% url 'smoking:jungrang_map' %}" style="height:25px;font-size:13px">중랑구</a>
+            <a class="dropdown-item" href="{% url 'smoking:jungrang_map' %}">중랑구</a>
        </div>
-
-</div>
 
 <div class="box" align="center">
     <br/>
@@ -132,12 +112,12 @@
     <sub><strong style="color:blue">정보공개포털</strong>과 <strong style="color:blue">공공데이터포털</strong>의 데이터를 기반으로 만들어졌습니다.</sub><br/><br/>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=541b6d15b257b828a3da0c50a02d541e"></script>
 
-<div id="map" style="width:100%;height:600px;">
+<div id="map" style="width:100%;height:1200px;">
     <div class="typebox">
-        <div class="smalltype"><img style="width:32px; height:32px;" src="https://user-images.githubusercontent.com/73421028/130042810-11cff1f2-de87-4a9c-86c1-89f874e49533.png">완전폐쇄형 </div>
-        <div class="smalltype"><img style="width:32px; height:32px;" src="https://user-images.githubusercontent.com/73421028/130042821-0d328094-0a1f-427c-82cd-45b9ec3e3c6f.png">완전개방형 </div>
-        <div class="smalltype"><img style="width:32px; height:32px;" src="https://user-images.githubusercontent.com/73421028/130042815-976e3814-7941-492d-bdb6-dc34039980a1.png">부분개방형 </div>
-        <div class="smalltype2"><img style="width:32px; height:32px;" src="https://user-images.githubusercontent.com/73421028/130042829-0ce402dd-d54a-4775-924c-4d1e74724099.png">&nbsp&nbsp&nbsp&nbsp&nbsp기타&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </div>
+            <div class="smalltype"><img style="width:42px; height:42px;" src="https://user-images.githubusercontent.com/73709089/140315617-3954363c-15c7-4054-88ae-3f27022fb89f.png">완전폐쇄형 </div>
+            <div class="smalltype"><img style="width:42px; height:42px;" src="https://user-images.githubusercontent.com/73709089/140315629-ae6791aa-13fc-4bcb-83a6-909d849abebf.png">완전개방형 </div>
+            <div class="smalltype"><img style="width:42px; height:42px;" src="https://user-images.githubusercontent.com/73709089/140315641-718e9afd-e90b-48d4-9502-96404a2b76b8.png">부분개방형 </div>
+            <div class="smalltype"><img style="width:42px; height:42px;" src="https://user-images.githubusercontent.com/73709089/140315652-89c32358-efcb-4104-8b0d-0380732209b8.png">&nbsp&nbsp&nbsp&nbsp&nbsp기타&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </div>
     </div>
 </div>
 <br/><br/>
@@ -376,13 +356,105 @@ var littleopenpositions = [
     },
 ];
 
+// 부분개방형 마커 이미지의 이미지 주소입니다
+var loimageSrc = "https://user-images.githubusercontent.com/73709089/140315641-718e9afd-e90b-48d4-9502-96404a2b76b8.png";
+
+for (var i = 0; i < littleopenpositions.length; i ++) {
+
+    // 마커 이미지의 이미지 크기 입니다
+    var imageSize = new kakao.maps.Size(64, 64);
+
+    // 마커 이미지를 생성합니다
+    var lomarkerImage = new kakao.maps.MarkerImage(loimageSrc, imageSize);
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        map: map, // 마커를 표시할 지도
+        position: littleopenpositions[i].latlng, // 마커를 표시할 위치
+        image : lomarkerImage // 마커 이미지
+    });
+
+    // 마커에 표시할 인포윈도우를 생성합니다
+    var infowindow = new kakao.maps.InfoWindow({
+        content: littleopenpositions[i].content, // 인포윈도우에 표시할 내용
+        removable:true
+    });
+
+    // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+    // 이벤트 리스너로는 클로저를 만들어 등록합니다
+    // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+    kakao.maps.event.addListener(marker, 'click', makeOverListener(map, marker, infowindow));
+}
+
+// 인포윈도우를 표시하는 클로저를 만드는 함수입니다
+function makeOverListener(map, marker, infowindow) {
+    return function() {
+        infowindow.open(map, marker);
+    };
+}
+
+// 인포윈도우를 닫는 클로저를 만드는 함수입니다
+function makeOutListener(infowindow) {
+    return function() {
+        infowindow.close();
+    };
+}
+
+// ---------------------------------------------------------------------------------------------
+
+// 완전폐쇄형 마커 이미지의 이미지 주소입니다
+var fcimageSrc = "https://user-images.githubusercontent.com/73709089/140315617-3954363c-15c7-4054-88ae-3f27022fb89f.png";
+
+for (var i = 0; i < fullclosepositions.length; i ++) {
+
+    // 마커 이미지의 이미지 크기 입니다
+    var imageSize = new kakao.maps.Size(64, 64);
+
+    // 마커 이미지를 생성합니다
+    var markerImage = new kakao.maps.MarkerImage(fcimageSrc, imageSize);
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        map: map, // 마커를 표시할 지도
+        position: fullclosepositions[i].latlng, // 마커를 표시할 위치
+        image : markerImage // 마커 이미지
+    });
+
+    // 마커에 표시할 인포윈도우를 생성합니다
+    var infowindow = new kakao.maps.InfoWindow({
+        content: fullclosepositions[i].content, // 인포윈도우에 표시할 내용
+        removable:true
+    });
+
+    // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+    // 이벤트 리스너로는 클로저를 만들어 등록합니다
+    // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+    kakao.maps.event.addListener(marker, 'click', makeOverListener(map, marker, infowindow));
+}
+
+// 인포윈도우를 표시하는 클로저를 만드는 함수입니다
+function makeOverListener(map, marker, infowindow) {
+    return function() {
+        infowindow.open(map, marker);
+    };
+}
+
+// 인포윈도우를 닫는 클로저를 만드는 함수입니다
+function makeOutListener(infowindow) {
+    return function() {
+        infowindow.close();
+    };
+}
+
+// ----------------------------------------------------------------------------------------
+
 // 완전개방형 마커 이미지의 이미지 주소입니다
-var foimageSrc = "https://user-images.githubusercontent.com/73421028/130042821-0d328094-0a1f-427c-82cd-45b9ec3e3c6f.png";
+var foimageSrc = "https://user-images.githubusercontent.com/73709089/140315629-ae6791aa-13fc-4bcb-83a6-909d849abebf.png";
 
 for (var i = 0; i < fullopenpositions.length; i ++) {
 
     // 마커 이미지의 이미지 크기 입니다
-    var imageSize = new kakao.maps.Size(36, 36);
+    var imageSize = new kakao.maps.Size(64, 64);
 
     // 마커 이미지를 생성합니다
     var fomarkerImage = new kakao.maps.MarkerImage(foimageSrc, imageSize);
