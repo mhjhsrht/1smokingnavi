@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f9334f5-8302-49f8-9507-19bd6853b0e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/post/templates/post/post_list_etc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/templates/post/post_list_notice.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/templates/post/post_list_questions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/templates/post/post_list_report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/templates/post/post_list_request.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/templates/post/post_confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/post/templates/post/post_confirm_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/templates/post/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/post/templates/post/post_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/etc.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/etc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/fullclose.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/fullclose.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/fullopen.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/fullopen.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/graph.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/graph.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smoking/templates/smoking/littleopen.html" beforeDir="false" afterPath="$PROJECT_DIR$/smoking/templates/smoking/littleopen.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
