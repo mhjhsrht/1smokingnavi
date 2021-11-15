@@ -8,7 +8,7 @@
 
     .box {
     position : absolute;
-    top : 180px;
+    top : 290px;
     left: 15px;
     width: 97%;
 
@@ -23,9 +23,9 @@
 .dropdown, .dropdown *{margin:0;color:#000;}
 .dropdown {position:absolute;top:10px;left:10px;z-index:10;text-align:center;background-color:#fff;}
 
-.typebox {width: 144px; position:absolute; top:10px; right:10px; z-index:10; text-align:center; background-color:#fff; padding : 7px;
+.typebox {width: 200px; height:200px; position:absolute; top:10px; right:10px; z-index:10; text-align:center; background-color:#fff; padding : 7px;
           border-radius:10px;}
-.smalltype {margin-bottom:3px;}
+.smalltype {margin-bottom:4px; font-size:23px;}
 </style>
 
 <br>
@@ -35,10 +35,10 @@
 
 <!-- 지도가 표시될 div -->
     <!-- 지도 위에 표시될 드롭다운 -->
-    <div id="map" style="width:100%;height:500px;">
+    <div id="map" style="width:100%;height:1200px;">
         <div class = "dropdown">
-            <button class = "btn btn-secondary dropdown-toggle" data-toggle="dropdown" style="color:white;">기타</button>
-            <div class="dropdown-menu">
+            <button class = "btn btn-secondary dropdown-toggle" data-toggle="dropdown" style="color:white; width:200px; height:80px;font-size:23px;">기타</button>
+            <div class="dropdown-menu" style="width:200px; height:145px;">
               <a class="dropdown-item" href="{% url 'smoking:fullclose' %}">완전폐쇄형</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
               <a class="dropdown-item" href="{% url 'smoking:fullopen' %}">완전개방형</a>
@@ -217,12 +217,12 @@ var positions = [
 ];
 
 // 마커 이미지의 이미지 주소입니다
-var imageSrc = "https://user-images.githubusercontent.com/73421028/130042829-0ce402dd-d54a-4775-924c-4d1e74724099.png";
+var imageSrc = "https://user-images.githubusercontent.com/73709089/140315652-89c32358-efcb-4104-8b0d-0380732209b8.png";
 
 for (var i = 0; i < positions.length; i ++) {
 
     // 마커 이미지의 이미지 크기 입니다
-    var imageSize = new kakao.maps.Size(32, 32);
+    var imageSize = new kakao.maps.Size(64, 64);
 
     // 마커 이미지를 생성합니다
     var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);

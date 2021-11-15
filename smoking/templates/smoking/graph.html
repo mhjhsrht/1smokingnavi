@@ -60,7 +60,7 @@ ul.tabs li.current, ul.tabs2 li.current{
 
 <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/></head>
     {% if request.user.is_staff %}
-    <i class="fas fa-redo" style="float:right;" onclick="alert('개발 중');">  최신 데이터 업데이트</i>
+    <i class="fas fa-redo" style="position:relative; top:95px; left:600px;float:left;" onclick="alert('개발 중');">  최신 데이터 업데이트</i>
     {% endif %}<br/>
 
 <div class="bigbox">
@@ -100,7 +100,7 @@ ul.tabs li.current, ul.tabs2 li.current{
   <div id="container2" style ="width:100%;">
    <h5>자치구별 흡연율 (2019)</h5>
     <p style="text-align:center;font-size:12px;">모든 정보는 <a href="https://www.open.go.kr/com/main/mainView.do" style="color: blue">정보 공개 포털</a>의 자료를 기반으로 작성되었습니다.</p>
-        <iframe src="../static/charts/borough_bar(3).html" width="100%"  height="1000" frameborder="0" framespacing="0" marginheight="0" marginwidth="50%" scrolling="no" vspace="0"></iframe>
+        <iframe src="../static/charts/borough_bar(3).html" width="750"  height="1000" frameborder="0" framespacing="0" marginheight="0" marginwidth="50%" scrolling="no" vspace="0"></iframe>
   </div>
 </a>
 </div>

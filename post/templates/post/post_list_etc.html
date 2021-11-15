@@ -1,0 +1,231 @@
+{% extends "post/post_base.html" %}
+
+{% block content %}
+<style>
+
+.container {
+    margin-bottom: 10px;
+    position:relative;
+    top:100px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.item {
+    overflow: hidden;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.item h3 {
+    font-weight: bolder;
+}
+
+.info {
+    display: inline-block;
+    float: right;
+    font-size: 13px;
+    color: #707070;
+    margin-top: 10px;
+}
+
+.info span {
+    font-weight: bold;
+}
+
+<!--.author {-->
+<!--    float: right;-->
+<!--}-->
+
+.text-ellipsis {
+      width: 450px;
+      padding: 0 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+}
+
+.td-title {
+      width: 200px;
+      padding: 0 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+}
+
+table {
+    width: 100%;
+}
+
+.table {
+    border-collapse: separate;
+}
+
+.buttonbox {
+    width:100%;
+    height: 10px;
+}
+
+
+.writebutton{
+    float:right;
+}
+
+.searchbutton{
+    float:right;
+}
+/* 데스크탑 */
+
+@media screen and (max-width:1023px) {
+/* 타블렛 */
+   #text-ellipsis, .text-ellipsis      { overflow:hidden; text-overflow:ellipsis; white-space:nowrap;width:300px;}
+   #td-title, .td-title      { overflow:hidden; text-overflow:ellipsis; white-space:nowrap;width:100px;}
+   #td-date, .td-date      { overflow:hidden; text-overflow:ellipsis; white-space:nowrap;width:100px;}
+   #td-author, .td-author      { overflow:hidden; text-overflow:ellipsis; white-space:nowrap;width:80px;}
+}
+
+@media screen and (max-width:767px) {
+/* 모바일 */
+   #text-ellipsis, .text-ellipsis      { overflow:hidden; text-overflow:ellipsis; white-space:nowrap;width:150px;}
+   #td-title, .td-title      { overflow:hidden; text-overflow:ellipsis; white-space:nowrap;width:90px;}
+   #td-date, .td-date      { overflow:hidden; text-overflow:ellipsis; white-space:nowrap;width:50px;}
+   #td-author, .td-author      { overflow:hidden; text-overflow:ellipsis; white-space:nowrap;width:50px;}
+}
+
+</style>
+
+<body>
+
+
+<div class="container">
+
+  <div class="buttonbox">
+        <!--글쓰기 기능을 위한 버튼-->
+        <div class="writebutton">
+            <a href="{% url 'post:post_new' %}">
+            <button class="btn my-2 my-sm-0">
+                <img style="width:36px;height:36px;margin-top:7px;" src="https://user-images.githubusercontent.com/73421028/133558544-baeabe75-999d-415b-8f02-746b2293d5e6.png">
+            </button>
+            </a>
+        </div>
+
+        <!-- 검색 기능을 위한 검색 창과 버튼-->
+        <div class="searchbutton">
+            <form action="" method="GET" class="form-inline my-2 my-lg-0" >
+                <input class="form-control mr-sm-2" style="width:360px; height:50px;" name="search_key" value="{{ search_key }}" type="text" placeholder="검색어를 입력해주세요" aria-label="Search">
+                <button class="btn my-2 my-sm-0" type="submit">
+                    <img style="width:36px;height:36px;" src="https://user-images.githubusercontent.com/73421028/133556991-e1de119a-40b5-4276-b980-9254d9ee5af3.png">
+                </button>
+            </form>
+        </div>
+    </div>
+    <br>
+
+
+
+    <div class="row mt-5" style="font-size:23px;">
+        <div class="col-12">
+        </div>
+        <table class="table" cellspacing="0">
+            <thead class="thead">
+                <tr>
+                    <th scope="col">&nbsp;&nbsp;</th>
+                    <th scope="col">
+                    <div class="dropdown" style="text-align:center;height:30px;">
+                        <button style="font-size:23px;" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                            <strong>기타</strong>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="{% url 'post:post_list' %}" style="margin-left:10px;color:black">전체</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="{% url 'post:post_list_notice' %}" style="margin-left:10px;color:orange">공지</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="{% url 'post:post_list_questions' %}" style="margin-left:10px;color:limegreen">질문</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="{% url 'post:post_list_request' %}" style="margin-left:10px;color:pink">요청</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="{% url 'post:post_list_report' %}" style="margin-left:10px;color:violet">제보</a></li>
+                        </ul>
+                    </div>
+                    </th>
+                    <th scope="col">제목</th>
+                    <th scope="col">내용</th>
+<!--                    <th scope="col">작성일</th>-->
+                    <th scope="col">작성자</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            {% for post in posts %}
+                <tr onclick = "location.href='post/{{ post.pk }}/'">
+                    <th scope="row">
+                        {{ post.number }}
+                    </th>
+
+            {#                카테고리#}
+                    <td width="50px" style="word-break:break-all;color:lightskyblue;text-align:center"><div class="td-title">
+                        {{ post.category}}
+                    </div></td>
+
+                    <td width="250px" style="word-break:break-all"><div class="td-title">
+            {#                    링크 수정 : 글번호 --> 제목#}
+                        <a  style="text-decoration:none; color:#57B59A;"  href='post/{{ post.pk }}/'>
+                                    {{ post.title }}
+                        </a>
+                    </div></td>
+                    <td width="500px" style="word-break:break-all"><div class="text-ellipsis">{{ post.text }}</div></td>
+            <!--               <td width="250px" style="word-break:break-all"><div class="td-date">{{ post.published_date }}</div></td>-->
+                    <td width="200px" style="word-break:break-all"><div class="td-author">{{ post.author }}</div></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <!-- 페이징처리 시작 -->
+
+    </div>
+</div>
+
+<br><br><br><br><br><br><br><br><br>
+
+<div class="paging" style="font-size:26px;">
+        <ul class="pagination justify-content-center">
+        <!-- 이전페이지 -->
+        {% if posts.has_previous %}
+        <li class="page-item">
+            <a class="page-link" style="text-decoration:none; color:#57B59A;" href="?page={{ posts.previous_page_number }}">이전</a>
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+            <a class="page-link" tabindex="-1" aria-disabled="true" href="#">이전</a>
+        </li>
+        {% endif %}
+        <!-- 페이지리스트 -->
+        {% for page_number in posts.paginator.page_range %}
+            {% if page_number == posts.number %}
+                <li class="page-item" aria-current="page">
+                    <a class="page-link" style="text-decoration:none; color:#57B59A;" href="?page={{ page_number }}">{{ page_number }}</a>
+                </li>
+            {% else %}
+                <li class="page-item">
+                    <a class="page-link" style="text-decoration:none; color:black;" href="?page={{ page_number }}">{{ page_number }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+        <!-- 다음페이지 -->
+        {% if posts.has_next %}
+        <li class="page-item">
+            <a class="page-link" style="text-decoration:none; color:#57B59A;" href="?page={{ posts.next_page_number }}">다음</a>
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+            <a class="page-link" tabindex="-1" aria-disabled="true" href="#">다음</a>
+        </li>
+        {% endif %}
+        </ul>
+        <!-- 페이징처리 끝 -->
+</div>
+
+</body>
+{% endblock %}

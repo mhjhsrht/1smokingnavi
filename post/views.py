@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 from django.utils import timezone
 from django.core.paginator import Paginator
 
-from .models import Post, Comment
+from .models import Post, Comment, Category
 from .forms import PostForm
 from django.http import HttpResponse
 
@@ -23,8 +23,28 @@ def post_delete(request, pk):
         return HttpResponse('잘못된 접근 입니다.')
 
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    posts = Post.objects.all(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'post/post_list.html', {'posts': posts})
+
+def post_list_notice(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now(), category__name='공지').order_by('-published_date')
+    return render(request, 'post/post_list_notice.html', {'posts': posts})
+
+def post_list_questions(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now(), category__name='질문').order_by('-published_date')
+    return render(request, 'post/post_list_questions.html', {'posts': posts})
+
+def post_list_request(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now(), category__name='요청').order_by('-published_date')
+    return render(request, 'post/post_list_request.html', {'posts': posts})
+
+def post_list_report(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now(), category__name='제보').order_by('-published_date')
+    return render(request, 'post/post_list_report.html', {'posts': posts})
+
+def post_list_etc(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now(), category__name='기타').order_by('-published_date')
+    return render(request, 'post/post_list_etc.html', {'posts': posts})
 
 def post_detail(request, pk):
     post_detail = get_object_or_404(Post, pk=pk)
