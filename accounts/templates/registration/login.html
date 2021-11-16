@@ -42,7 +42,7 @@
     color: var(--button-color);
 }
 </style>
-
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/></head>
 <div class="loginbox">
     <div>
         <h4>로그인</h4>
@@ -66,8 +66,8 @@
         </div>
         <br/><br/>
 
-        <button style="font-size:23px;" id="button1" type="submit" class="btn btn-outline-success">로그인</button>
-        <a style="font-size:23px;" href="{% url 'accounts:register' %}" class="btn btn-outline-success">회원가입</a>
+        <button style="font-size:23px;" id="button1" type="submit" class="btn btn-outline-success"><i class="fas fa-user">로그인</i></button>
+        <a style="font-size:23px;" href="{% url 'accounts:register' %}" class="btn btn-outline-success"><i class="fas fa-user-plus">회원가입</i></a>
     </form>
 </div>
 {% endblock %}

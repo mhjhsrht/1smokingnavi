@@ -40,6 +40,7 @@ urlpatterns=[
     path('jongro_map/', views.jongro_map, name='jongro_map'),
     path('jung_map/', views.jung_map, name='jung_map'),
     path('jungrang_map/', views.jungrang_map, name='jungrang_map'),
+    path('area/', views.area, name='area'),
 
     path('fullopen/', views.fullopen, name='fullopen'),
     path('fullclose/', views.fullclose, name='fullclose'),

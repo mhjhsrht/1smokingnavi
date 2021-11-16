@@ -119,6 +119,9 @@ def jung_map(request) :
 def jungrang_map(request) :
     return render(request, 'smoking/jungrang_map.html')
 
+def area(request) :
+    return render(request, 'smoking/area.html')
+
 
 from django.views.generic import View
 from django.shortcuts import render
@@ -126,3 +129,26 @@ from django.shortcuts import render
 class ChartView(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'smoking/cp_cd.html')
+
+import json
+
+def showattractions(request):
+    with open('static/json/attractions.json', encoding='utf-8') as json_file:
+        attractions = json.load(json_file)['response']['body']['items']['item']
+
+    attractiondict = []
+    for attraction in attractions:
+        if attraction.get('mapx'):
+            content = {
+                "title": attraction['title'],
+                "mapx": str(attraction['mapx']),
+                "mapy": str(attraction['mapy']),
+                "addr1": str(attraction['addr1']),
+            }
+            if attraction.get('tel'):
+                content['tel'] = str(attraction['tel'])
+            else:
+                content['tel'] = ''
+            attractiondict.append(content)
+    attractionJson = json.dumps(attractiondict, ensure_ascii=False)
+    return render(request, 'smoking/area.html', {'attractionJson': attractionJson})

@@ -23,7 +23,7 @@
 .dropdown, .dropdown *{margin:0;color:#000;}
 .dropdown {position:absolute;top:10px;left:10px;z-index:10;text-align:center;background-color:#fff;}
 
-.typebox {width: 200px; height:200px; position:absolute; top:10px; right:10px; z-index:10; text-align:center; background-color:#fff; padding : 7px;
+.typebox {width: 200px; height:240px; position:absolute; top:10px; right:10px; z-index:10; text-align:center; background-color:#fff; padding : 7px;
           border-radius:10px;}
 .smalltype {margin-bottom:4px; font-size:23px;}
 </style>
@@ -36,10 +36,10 @@
 
 <!-- 지도가 표시될 div -->
     <!-- 지도 위에 표시될 드롭다운 -->
-    <div id="map" style="width:100%;height:1200px;">
+<div id="map" style="width:100%;height:1200px;">
         <div class = "dropdown">
             <button class = "btn btn-secondary dropdown-toggle" data-toggle="dropdown" style="color:white; width:200px; height:80px;font-size:23px;">완전폐쇄형</button>
-            <div class="dropdown-menu" style="width:200px; height:145px;">
+            <div class="dropdown-menu" style="width:200px; height:175px;">
               <a class="dropdown-item" href="{% url 'smoking:fullclose' %}">완전폐쇄형</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
               <a class="dropdown-item" href="{% url 'smoking:fullopen' %}">완전개방형</a>
@@ -47,7 +47,17 @@
               <a class="dropdown-item" href="{% url 'smoking:littleopen' %}">부분개방형</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
               <a class="dropdown-item" href="{% url 'smoking:etc' %}">기타</a>
+                <div class="dropdown-divider"></div> <!-- 구분선 -->
+              <a class="dropdown-item" href="{% url 'smoking:area' %}">제보</a>
             </div>
+        </div>
+
+       <div class="typebox">
+            <div class="smalltype"><img style="width:42px; height:42px;" src="https://user-images.githubusercontent.com/73709089/140315617-3954363c-15c7-4054-88ae-3f27022fb89f.png">완전폐쇄형 </div>
+            <div class="smalltype"><img style="width:42px; height:42px;" src="https://user-images.githubusercontent.com/73709089/140315629-ae6791aa-13fc-4bcb-83a6-909d849abebf.png">완전개방형 </div>
+            <div class="smalltype"><img style="width:42px; height:42px;" src="https://user-images.githubusercontent.com/73709089/140315641-718e9afd-e90b-48d4-9502-96404a2b76b8.png">부분개방형 </div>
+            <div class="smalltype"><img style="width:42px; height:42px;" src="https://user-images.githubusercontent.com/73709089/140315652-89c32358-efcb-4104-8b0d-0380732209b8.png">&nbsp&nbsp&nbsp&nbsp&nbsp기타&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </div>
+           <div class="smalltype"><img style="width:42px; height:42px;" src="https://user-images.githubusercontent.com/73709089/141743559-f74478c8-af5f-4e72-9d38-6ed3f1d28e7e.png">&nbsp&nbsp&nbsp&nbsp&nbsp제보&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </div>
         </div>
     </div>
 
@@ -302,7 +312,7 @@ function makeOutListener(infowindow) {
 
 </div>
 
-</div>
+
 
 
 {% endblock %}

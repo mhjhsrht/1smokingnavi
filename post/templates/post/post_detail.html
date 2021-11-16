@@ -2,6 +2,10 @@
 
 {% block content %}
 <style>
+.container{
+    position:relative;
+    top:150px;
+}
 /* 모바일에 적용될 스타일 */
 @media screen and (max-width: 768px) {
     #submit-btn {
@@ -26,17 +30,17 @@
      }
 }
 </style>
-
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/></head>
 <body>
 <br/><br/><br/><br/>
     <div class="container">
         <form action="delete/" method="POST" style="float:right; margin-top:0;">
             {% csrf_token %}
-            <a class="btn btn-outline-success" href="{% url 'post:post_list' %}" style ="float:left; margin-top:25px;margin-left:5px;">글 목록</a>
+            <a class="btn btn-outline-success" href="{% url 'post:post_list' %}" style ="float:left; margin-top:25px;margin-left:5px;"><i class="fas fa-list"> 목록</i></a>
             {% if user == post.author %}
-            <a class="btn btn-outline-success" href="edit/" style="float:left;margin-top:25px;margin-left:5px;">수정</a>
+            <a class="btn btn-outline-success" href="edit/" style="float:left;margin-top:25px;margin-left:5px;"><i class="fas fa-edit"> 수정</i></a>
 {#            <button type="submit" class="btn btn-outline-danger" style="margin-top:25px;margin-left:5px;">삭제</button>#}
-            <a class="btn btn-outline-danger" href="confirm_delete/" style="float:left;margin-top:25px;margin-left:5px;">삭제</a>
+            <a class="btn btn-outline-danger" href="confirm_delete/" style="float:left;margin-top:25px;margin-left:5px;"><i class="fas fa-trash-alt"> 삭제</i></a>
             {% endif %}
         </form>
         <h4>{{ post.number }}</h4>

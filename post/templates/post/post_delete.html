@@ -3,6 +3,8 @@
 {% block content %}
 <style>
 .mustlogin {
+    position:relative;
+    top:350px;
     font-size: 17px;
     font-weight: bolder;
     text-align: center;
@@ -32,13 +34,13 @@
         text-align:center;
     }
 </style>
-
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/></head>
 <body>
     <br/>
     <div class="mustlogin">
         <p>글이 삭제되었습니다.</p>
         <a href="/">
-            <a class="btn btn-outline-success" href="{% url 'post:post_list' %}" style ="margin-top:25px;">글 목록</a>
+            <a class="btn btn-outline-success" href="{% url 'post:post_list' %}" style ="margin-top:25px;"><i class="fas fa-list"> 목록</i></a>
         </a>
     </div>
 </body>

@@ -37,7 +37,7 @@
     <!-- 지도 위에 표시될 드롭다운 -->
     <div id="map" style="width:100%;height:1200px;">
         <div class = "dropdown">
-            <button class = "btn btn-secondary dropdown-toggle" data-toggle="dropdown" style="color:white; width:200px; height:80px;font-size:23px;">기타</button>
+            <button class = "btn btn-secondary dropdown-toggle" data-toggle="dropdown" style="color:white; width:200px; height:80px;font-size:23px;">제보</button>
             <div class="dropdown-menu" style="width:200px; height:175px;">
               <a class="dropdown-item" href="{% url 'smoking:fullclose' %}">완전폐쇄형</a>
                 <div class="dropdown-divider"></div> <!-- 구분선 -->
@@ -116,118 +116,22 @@ function displayMarker(locPosition, message) {
 // 기타,
 var positions = [
     {
-        title: '고척 돔구장', // 1
-        content: '<div style="padding:15px;width:350px;text-align: center;">고척 돔구장<br>기타<br><a href="http://kko.to/Fjotfm4fT">길찾기</a></div>',
-        latlng: new kakao.maps.LatLng(37.49714906421556, 126.86712760483907), // 1 좌표
-        category : '기타'
+        title: '제보 흡연구역(한양여대 뒤 편의점 가는 길)', // 16
+        content: '<div style="padding:15px;width:350px;text-align: center;">제보 흡연구역(한양여대 뒤 편의점 가는 길)<br>제보<br><a href="http://kko.to/SXhC4yf4B">길찾기</a></div>',
+        latlng: new kakao.maps.LatLng(37.559918695188266, 127.04934087246772), // 16 좌표
+        category : '제보'
     },
     {
-        title: '구로성심병원', // 2
-        content: '<div style="padding:15px;width:350px;text-align: center;">구로성심병원<br>기타<br><a href="http://kko.to/vweafyf4p">길찾기</a></div>',
-        latlng: new kakao.maps.LatLng(37.49959894665328, 126.86637122249074), // 2 좌표
-        category : '기타'
-    },
-    {
-        title: '고대구로병원', // 3
-        content: '<div style="padding:15px;width:350px;text-align: center;">고대구로병원<br>기타<br><a href="http://kko.to/sFZ9fyf4T">길찾기</a></div>',
-        latlng: new kakao.maps.LatLng(37.4922481037989, 126.88477926082115), // 3 좌표
-        category : '기타'
-    },
-    {
-        title: '지하이시티', // 4
-        content: '<div style="padding:15px;width:350px;text-align: center;">지하이시티<br>기타<br><a href="http://kko.to/Safcfy44j">길찾기</a></div>',
-        latlng: new kakao.maps.LatLng(37.48197472441093, 126.89232499343505), // 4 좌표
-        category : '기타'
-    },
-    {
-        title: '넷마블', // 5
-        content: '<div style="padding:15px;width:350px;text-align: center;">넷마블<br>기타<br><a href="http://kko.to/ZTQx4m4fH">길찾기</a></div>',
-        latlng: new kakao.maps.LatLng(37.47984876904865, 126.89530432731651), // 5 좌표
-        category : '기타'
-    },
-    {
-        title: '대륭포스트타워 1차', // 6
-        content: '<div style="padding:15px;width:350px;text-align: center;">대륭포스트타워 1차<br>기타<br><a href="http://kko.to/oaeWfyf4p">길찾기</a></div>',
-        latlng: new kakao.maps.LatLng(37.48364899795244, 126.89555907412053), // 6 좌표
-        category : '기타'
-    },
-    {
-        title: '대륭포스트타워 2차', // 7
-        content: '<div style="padding:15px;width:350px;text-align: center;">대륭포스트타워 2차<br>기타<br><a href="http://kko.to/VUv34yffT">길찾기</a></div>',
-        latlng: new kakao.maps.LatLng(37.48586260207355, 126.89741879222926), // 7 좌표
-        category : '기타'
-    },
-    {
-        title: '대륭포스트타워 3차', // 8
-        content: '<div style="padding:15px;width:350px;text-align: center;">대륭포스트타워 3차<br>기타<br><a href="http://kko.to/ZfoO4m4fT">길찾기</a></div>',
-        latlng: new kakao.maps.LatLng(37.48547582686069, 126.89817970119574), // 8 좌표
-        category : '기타'
-    },
-    {
-        title: '코오롱디지털타워빌란트', // 9
-        content: '<div style="padding:15px;width:350px;text-align: center;">코오롱디지털타워빌란트<br>기타<br><a href="http://kko.to/DF7hfm440">길찾기</a></div>',
-        latlng: new kakao.maps.LatLng(37.48315182891749, 126.89628337687337), // 9 좌표
-        category : '기타'
-    },
-    {
-        title: '삼성아이티밸리', // 10
-        content: '<div style="padding:15px;width:350px;text-align: center;">삼성아이티밸리<br>기타<br><a href="http://kko.to/pTSb4m44o">길찾기</a></div>',
-        latlng: new kakao.maps.LatLng(37.486058370779425, 126.89463138469814), // 10 좌표
-        category : '기타'
-    },
-    {
-        title: '코오롱싸이언스밸리 2차', // 11
-        content: '<div style="padding:15px;width:350px;text-align: center;">코오롱싸이언스밸리 2차<br>기타<br><a href="http://kko.to/rDjlfyf4M">길찾기</a></div>',
-        latlng: new kakao.maps.LatLng(37.48426934037059, 126.89918762467792), // 11 좌표
-        category : '기타'
-    },
-    {
-        title: '우림이비지센터 1차', // 12
-        content: '<div style="padding:15px;width:350px;text-align: center;">우림이비지센터 1차<br>기타<br><a href="http://kko.to/Gydl4m4f0">길찾기</a></div>',
-        latlng: new kakao.maps.LatLng(37.486998310888865, 126.89535088560793), // 12 좌표
-        category : '기타'
-    },
-    {
-        title: '이엔씨벤쳐드림타워 2차', // 13
-        content: '<div style="padding:15px;width:350px;text-align: center;">이엔씨벤쳐드림타워 2차<br>기타<br><a href="http://kko.to/sjJ84m440">길찾기</a></div>',
-        latlng: new kakao.maps.LatLng(37.48685418307749, 126.89287485909642), // 13 좌표
-        category : '기타'
-    },
-    {
-        title: '에이스테크노타워 3차', // 14
-        content: '<div style="padding:15px;width:350px;text-align: center;">에이스테크노타워 3차<br>기타<br><a href="http://kko.to/eSx74yffB">길찾기</a></div>',
-        latlng: new kakao.maps.LatLng(37.484500745333236, 126.89336723075682), // 14 좌표
-        category : '기타'
-    },
-    {
-        title: '에이스하이엔드타워 1차', // 15
-        content: '<div style="padding:15px;width:350px;text-align: center;">에이스하이엔드타워 1차<br>기타<br><a href="http://kko.to/avlU4y4fM">길찾기</a></div>',
-        latlng: new kakao.maps.LatLng(37.481583854487134, 126.89350422367691), // 15 좌표
-        category : '기타'
-    },
-    {
-        title: 'JNK 디지털타워', // 16
-        content: '<div style="padding:15px;width:350px;text-align: center;">JNK 디지털타워<br>기타<br><a href="http://kko.to/Vnwm4y44B">길찾기</a></div>',
-        latlng: new kakao.maps.LatLng(37.482508386947885, 126.89717463902889), // 16 좌표
-        category : '기타'
-    },
-    {
-        title: '지플러스(G+)타워', // 16
-        content: '<div style="padding:15px;width:350px;text-align: center;">지플러스(G+)타워<br>기타<br><a href="http://kko.to/SXhC4yf4B">길찾기</a></div>',
-        latlng: new kakao.maps.LatLng(37.48305396988078, 126.89771942528968), // 16 좌표
-        category : '기타'
-    },
-    {
-        title: '마포구청', // 1
-        content: '<div style="padding:15px;width:350px;text-align: center;">마포구청<br>기타<br><a href="http://kko.to/yp-3ok44B">길찾기</a></div>',
-        latlng: new kakao.maps.LatLng(37.56620427916011, 126.90195515408988), // 1 좌표
-        category : '기타'
+        title: '제보 흡연구역(한양여대 식품영양관 뒤 주차장)', // 1
+        content: '<div style="padding:15px;width:350px;text-align: center;">제보 흡연구역(한양여대 식품영양관 뒤 주차장)<br>제보<br><a href="http://kko.to/yp-3ok44B">길찾기</a></div>',
+        latlng: new kakao.maps.LatLng(37.558819944431036, 127.04821402236848), // 1 좌표
+        category : '제보'
     },
 
 ];
 
 // 마커 이미지의 이미지 주소입니다
-var imageSrc = "https://user-images.githubusercontent.com/73709089/140315652-89c32358-efcb-4104-8b0d-0380732209b8.png";
+var imageSrc = "https://user-images.githubusercontent.com/73709089/141743559-f74478c8-af5f-4e72-9d38-6ed3f1d28e7e.png";
 
 for (var i = 0; i < positions.length; i ++) {
 
