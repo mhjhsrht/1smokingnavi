@@ -358,6 +358,11 @@ header {
 width:100%;
 }
 
+.container {
+    min-height: 100%;
+    margin-bottom: -70px;
+    padding-bottom: 10%;
+}
 </style>
 
 <head>
@@ -394,7 +399,6 @@ width:100%;
                 <div class="menuItem">
                     <div class="mi"><a onclick="location.href='/'">내 위치</a></div>
                     <div class="mi"><a onclick="location.href='/location'">위치/유형</a></div>
-{#                    <div class="mi"><a onclick="location.href='/graph'">현황 시각화</a></div>#}
 
                     <div class="mi dropbtn" href="javascript:void(0)" onclick="myFunction()">
 
@@ -409,7 +413,7 @@ width:100%;
                              </li>
                             </ul>
                     </div>
-                   <div class="mi" style="color:#57B59A;"><a onclick="location.href='/post/post_list'">게시판</a></div>
+                   <div class="mi"  style="color:#57B59A;"><a onclick="location.href='/post/post_list'">게시판</a></div>
                 </div>
 <!--            </div>-->
         </div>
